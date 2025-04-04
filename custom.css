@@ -1,0 +1,303 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-wrap: pretty;
+  /* border: 1px solid red; */
+}
+
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #d7d7d8;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5;
+  font-size: 1.6rem;
+  -webkit-font-smoothing: antialiased;
+  font-optical-sizing: auto;
+}
+
+.calculatorSection {
+
+}
+
+body{
+  overflow-x: hidden;
+  background: linear-gradient( to right , #db6767, #92d597);
+  /* background: linear-gradient( 55deg , #d84747, #63ea6c); */
+}
+
+.calContainer {
+}
+
+.calBody {
+}
+
+.calBlock {
+}
+
+.calBox {
+  /* background-color: #ffffff; */
+  padding: 3rem 2rem;
+  border-radius: 15px;
+  width: fit-content;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background: var(--glass);
+  /* border: var(--glassBorder); */
+}
+
+.title {
+  font-family: var(--ffPrimary);
+  font-size: 2rem;
+  color: var(--backGroundColor);
+  text-transform: uppercase;
+  /* margin-bottom: 2rem; */
+}
+
+.calc {
+  border: none;
+  background-color: #fefefe;
+  padding: 2rem;
+  border-radius: 8px;
+  /* min-width: fit-content; */
+}
+
+.numInput {
+  padding-right: 2rem;
+}
+
+label {
+  font-family: var(--ffPrimary);
+  font-size: 1.6rem;
+  color: var(--darkColor);
+}
+
+select {
+  font-size: 1.6rem;
+  padding: 15px 0;
+  border: 1px solid #000000;
+}
+
+select option {
+  font-size: 1.3rem; 
+}
+
+
+#result {
+  /* border: 2px solid #bbbbbb; */
+  border-radius: 10px;
+  background: var(--glass);
+  border: var(--glassBorder);
+}
+
+
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input ,
+select{
+  font-size: 1.6rem !important;
+}
+
+input::placeholder{
+  font-size: 1.6rem;
+}
+
+.btn{
+  font-size: 1.5rem;
+  color: var(--whiteColor);
+}
+.btn:hover{
+  /* transform: translateY(-3px); */
+  color: var(--whiteColor);
+  scale: 1.02;
+}
+
+.form-control{
+  background: var(--glass);
+  border: var(--glassBorder);
+  border-radius: 7px;
+}
+
+.shape1{
+  background: var(--glass);
+  border-radius: var(--glassBorder);
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  animation: move 10s ease-in-out 0ms infinite alternate both;
+  /* -webkit-animation: move 8s ease-in-out 2s infinite alternate both; */
+  position: absolute;
+  left: 37rem;
+  top: 3rem;
+}
+
+.shape2{
+  background: var(--glass);
+  border-radius: var(--glassBorder);
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  animation: move1 10s ease-in-out 0ms infinite alternate both;
+  /* -webkit-animation: move 8s ease-in-out 2s infinite alternate both; */
+  position: absolute;
+  right: 37rem;
+  top: 30rem;
+  bottom: 0;
+}
+
+.ani{
+  position: relative;
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(0) scale(0.8);
+  }
+  
+  100%{
+    transform: translateY(100px) scale(1);
+  }
+}
+
+@keyframes move1 {
+  0% {
+    transform: translateY(0);
+  }
+  100%{
+    transform: translateY(-100px);
+  }
+}
+
+#input1,
+#input2:focus{
+  background: var(--glass);
+}
+
+
+/* ::::: RESPONSIVE DESIGN DEVICE SIZES ::::: */
+
+/* for Responsive Target the ROW Code (display:grid) */
+
+/* Small devices (landscape phones, upto 576px and below) */
+/* @media (width <=576px) */
+@media (max-width: 576px) {
+  .grid-1,
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .shape1{
+    position: absolute;
+    left: -2rem;
+    top: 3rem;
+  }
+  
+  .shape2{
+    position: absolute;
+    right: -2rem;
+    top: 30rem;
+    bottom: 0;
+  }
+  
+  .ani{
+    position: relative;
+  }
+}
+
+/* Medium devices (tablets, upto 768px and above) */
+/* @media (min-width: 577px) and (max-width: 768px) */
+@media (width >=577px) and (width <=768px) {
+  .grid-1,
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .shape1{
+    position: absolute;
+    left: 6rem;
+    top: 3rem;
+  }
+  
+  .shape2{
+    position: absolute;
+    right: 6rem;
+    top: 30rem;
+    bottom: 0;
+  }
+  
+  .ani{
+    position: relative;
+  }
+}
+
+/* Large devices (Laptops, upto 992px and above) */
+/* @media (min-width: 769px) and (max-width: 992px) */
+@media (width >=769px) and (width <=992px) {
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .shape1{
+    position: absolute;
+    left: 6rem;
+    top: 3rem;
+  }
+  
+  .shape2{
+    position: absolute;
+    right: 6rem;
+    top: 30rem;
+    bottom: 0;
+  }
+  
+  .ani{
+    position: relative;
+  }
+}
+
+/* X-Large devices (large desktops, upto 1200px and above) */
+/* @media (min-width: 993px) and (max-width: 1200px) */
+@media (width >=993px) and (width <=1200px) {
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .shape1{
+    position: absolute;
+    left: 9rem;
+    top: 3rem;
+  }
+  
+  .shape2{
+    position: absolute;
+    right: 9rem;
+    top: 30rem;
+    bottom: 0;
+  }
+  
+  .ani{
+    position: relative;
+  }
+}
+
+/* XX-Large devices (larger desktops, upto 1400px and above) */
+/* @media (min-width: 1200px)  */
+@media (width >=1200px) {
+  /* write code here */
+}
